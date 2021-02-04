@@ -13,5 +13,7 @@
     "/fonts/FontAwesome.otf": "/fonts/FontAwesome.otf",
     "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/css/font-awesome.min.css": "/css/font-awesome.min.css",
-    "/css/bootstrap-theme.css": "/css/bootstrap-theme.css"
+    "/css/bootstrap-theme.css": "/css/bootstrap-theme.css",
+    "/js/html5shiv.js": "/js/html5shiv.js",
+    "/js/respond.min.js": "/js/respond.min.js"
 }
