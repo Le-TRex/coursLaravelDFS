@@ -2,14 +2,17 @@
 
 @section('content')
 
+
     <a href="{{route('home')}}">Home</a>
 
     <h1>TUT TUT POUET POUET LA VOILÀÀÀ ! LA TOTOMOBILEEEUUUH !!</h1>
 
-    @if (isset($prenom))
-        {{ $prenom }}
-        {{ $email }}
+    @if(isset($prenom))
+        {{$prenom}}
+        {{$email}}
     @endif
+
+<a href="{{route('home')}}">Home</a>
 
     <form method="post" action="{{ route('PostProfil') }}">
 
