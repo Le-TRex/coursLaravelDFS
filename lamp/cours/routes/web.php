@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[ HomeController::class, 'Home' ]);
+Route::get('/',[ HomeController::class, 'Home' ])->name('home');
 
 Route::get('/about', [ HomeController::class, 'about' ]);
+
+Route::get('/profil',[ ProfilController::class, 'Profil' ]);
+
+Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
