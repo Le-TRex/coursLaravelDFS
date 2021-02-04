@@ -1,8 +1,17 @@
 {
+    "/css/main.css": "/css/main.css",
     "/images/1.jpg": "/images/1.jpg",
     "/images/2.jpg": "/images/2.jpg",
     "/images/bg_header.jpg": "/images/bg_header.jpg",
     "/images/gt_favicon.png": "/images/gt_favicon.png",
     "/images/logo.png": "/images/logo.png",
-    "/images/mac.jpg": "/images/mac.jpg"
+    "/images/mac.jpg": "/images/mac.jpg",
+    "/fonts/fontawesome-webfont.eot": "/fonts/fontawesome-webfont.eot",
+    "/fonts/fontawesome-webfont.svg": "/fonts/fontawesome-webfont.svg",
+    "/fonts/fontawesome-webfont.ttf": "/fonts/fontawesome-webfont.ttf",
+    "/fonts/fontawesome-webfont.woff": "/fonts/fontawesome-webfont.woff",
+    "/fonts/FontAwesome.otf": "/fonts/FontAwesome.otf",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/font-awesome.min.css": "/css/font-awesome.min.css",
+    "/css/bootstrap-theme.css": "/css/bootstrap-theme.css"
 }
