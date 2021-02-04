@@ -1,6 +1,12 @@
 @extends('.Layouts.Front')
 
 @section('content')
+
+    @if(isset($prenom))
+        {{$prenom}}
+        {{$email}}
+    @endif
+
 <a href="{{route('home')}}">Home</a>
     <form method="post" action="{{ route('PostProfil') }}">
         @csrf

@@ -10,7 +10,9 @@ class ProfilController extends Controller
         return view('profil');
     }
     
-    public function PostProfil(){
-        return view('profil');
+    public function PostProfil(Request $request){
+        $prenom = $request->prenom;
+        $email = $request->email;
+        return view('profil', [ "email" => $email, "prenom" => $prenom ] );
     }
 }
