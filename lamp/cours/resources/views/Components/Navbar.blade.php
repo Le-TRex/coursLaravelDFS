@@ -7,7 +7,7 @@
             <a class="navbar-brand" href="index.html"><img src="{{ asset('images/logo.png') }}" alt="Progressus HTML5 template"></a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav pull-right">
+            <ul id="nav" class="nav navbar-nav pull-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="dropdown">
