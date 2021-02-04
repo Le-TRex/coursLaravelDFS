@@ -11,4 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.copy('resources/Front/assets/images/**/*', 'public/images');
+mix.copy('resources/Front/assets/images/**/*', 'public/images')
+    .copy('resources/Front/assets/fonts/**/*', 'public/fonts')
+    .copy('resources/Front/assets/css/bootstrap.min.css', 'public/css/')
+    .copy('resources/Front/assets/css/font-awesome.min.css', 'public/css')
+    .copy('resources/Front/assets/css/bootstrap-theme.css', 'public/css')
+    .postCss('resources/Front/assets/css/main.css', 'public/css')
