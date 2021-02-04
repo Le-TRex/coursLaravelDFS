@@ -13,7 +13,8 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function about(){
-        return view('about');
+        $salut = "Régissss";
+        return view('about', [ "nom" => $salut ]);
     }
     
     /**
