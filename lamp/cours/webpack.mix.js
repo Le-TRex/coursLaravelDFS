@@ -11,7 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.copy('resources/Front/assets/images/**/*', 'public/images')
+    .copy('resources/Front/assets/fonts/**/*', 'public/fonts')
+    .copy('resources/Front/assets/css/bootstrap.min.css', 'public/css')
+    .copy('resources/Front/assets/css/font-awesome.min.css', 'public/css')
+    .copy('resources/Front/assets/css/bootstrap-theme.css', 'public/css')
+    .postCss('resources/Front/assets/css/main.css', 'public/css')
+
+    .copy('resources/Front/assets/js/html5shiv.js', 'public/js')
+    .copy('resources/Front/assets/js/respond.min.js', 'public/js')
+
+
