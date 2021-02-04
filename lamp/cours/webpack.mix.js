@@ -21,4 +21,8 @@ mix.copy('resources/Front/assets/images/**/*', 'public/images')
 
     .copy('resources/Front/assets/js/html5shiv.js', 'public/js')
     .copy('resources/Front/assets/js/respond.min.js', 'public/js')
+    .copy('resources/Front/assets/js/headroom.min.js', 'public/js')
+    .copy('resources/Front/assets/js/template.js', 'public/js')
+    .copy('resources/Front/assets/js/jQuery.headroom.min.js', 'public/js')
+
 
