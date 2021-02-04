@@ -20,3 +20,5 @@ Route::get('/',[ HomeController::class, 'Home' ]);
 Route::get('/about', [ HomeController::class, 'about' ]);
 
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'profile']);
+
+Route::post('/profile', [\App\Http\Controllers\ProfileController::class, 'PostProfile'])->name('PostProfile');
