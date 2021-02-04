@@ -13,6 +13,7 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function about(){
+
         $salut = 'Jean-Michel';
         return view('about', ["name" => $salut]);
         //Attention, la variable $salut devient le nom de la clé donc $name
