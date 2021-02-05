@@ -29,5 +29,6 @@ Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostPro
 
 Route::get('/todos', [ TodoController::class, 'Home']);
 
-Route::get('/todos/{id}', [ TodoController::class, 'UpdateTodo' ]);
+Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ]);
 
+Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name('UpdateTodo');
