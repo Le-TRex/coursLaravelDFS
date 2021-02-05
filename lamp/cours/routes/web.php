@@ -29,8 +29,6 @@ Route::get('/todos', [ TodoController::class, 'Home'])->name('homeTodos');
 Route::get('/todos/create', [TodoController::class, 'CreateTodo'])->name('CreateTodo');
 Route::post('/todos/create', [TodoController::class, 'CreateTodoPost'])->name('CreateTodoPost');
 
-
-
 Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ])->name('TodoEdit');
 
 Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");
