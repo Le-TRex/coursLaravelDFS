@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
-    public function Home() {
+    public function Home(){
         $todos = Todo::all();
-
-        return view('todos', ["todos" => $todos]);
-
+        return view('todos', ["todos"=> $todos]);
     }
 
-    public function UpdateTodo(){
-
+    public function UpdateTodo($id){
+        ddd($id);
+        return view('UpdateTodo');
     }
 }

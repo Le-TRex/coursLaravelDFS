@@ -26,4 +26,8 @@ Route::get('/profil',[ ProfilController::class, 'Profil' ]);
 
 Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
 
-Route::get('/todos', [\App\Http\Controllers\TodoController::class, 'Home']);
+
+Route::get('/todos', [ TodoController::class, 'Home']);
+
+Route::get('/todos/{id}', [ TodoController::class, 'UpdateTodo' ]);
+
