@@ -16,7 +16,11 @@ class TodoController extends Controller
         return view('UpdateTodo', ["todo" => $todo]);
     }
     
-    public function UpdateTodoPost(Request $request){
-      ddd($request);
+    public function UpdateTodoPost(Request $request, Todo $todo){
+      $todo->name = $request->name;
+      $todo->description = $request->description;
+      $todo->save();
+      
+      return back()->with('success','Todo a été actualisée');
     }
 }

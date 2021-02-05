@@ -1,8 +1,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+@include('Components.flash')
+
 <label for="staticEmail" class="col-sm-2 col-form-label">id {{$todo->id}}</label>
 
-<form method="post" action="{{ route('UpdateTodo') }}">
+<form method="post" action="{{route('UpdateTodo',$todo->id)}}">
     @csrf
     @method("patch")
     <div class="form-group row">
