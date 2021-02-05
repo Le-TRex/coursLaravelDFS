@@ -2,6 +2,7 @@
 
 
 @include('Components.flash')
+<a class="button button-blue" href="{{route('CreateTodo')}}">Create</button>
 
 
 <table class="table">

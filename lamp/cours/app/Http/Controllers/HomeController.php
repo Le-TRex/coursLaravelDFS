@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,7 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function Home(){
+
 
 //        afficher les entrées de la table todos dont l'id = 1
 //        $todos = Todo::where('id', 1)->get();
@@ -45,5 +50,6 @@ class HomeController extends Controller
 
 
         return view('welcome');
+
     }
 }
