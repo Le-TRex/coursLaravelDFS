@@ -24,8 +24,16 @@ Route::get('/profil',[ ProfilController::class, 'Profil' ]);
 
 Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
 
-Route::get('/todos', [ TodoController::class, 'Home']);
+Route::get('/todos', [ TodoController::class, 'Home'])->name('homeTodos');
+
+Route::get('/todos/create', [TodoController::class, 'CreateTodo'])->name('CreateTodo');
+Route::post('/todos/create', [TodoController::class, 'CreateTodoPost'])->name('CreateTodoPost');
+
+
 
 Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ])->name('TodoEdit');
 
 Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");
+
+Route::delete('/todos/{todo:id}', [TodoController::class, 'DeleteTodo'])->name('DeleteTodo');
+

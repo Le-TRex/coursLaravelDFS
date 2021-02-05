@@ -23,4 +23,23 @@ class TodoController extends Controller
       
       return back()->with('success','Todo a été actualisée');
     }
+    
+    public function DeleteTodo(Todo $todo){
+        $todo->delete();
+        return back()->with('warning','Todo à été Delete');
+    }
+    
+    public function CreateTodo(){
+        return view('CreateTodos');
+    }
+    
+    public function CreateTodoPost(Request $request){
+        $todo = new Todo();
+        $todo->name = $request->name;
+        $todo->description = $request->description;
+        $todo->save();
+        return redirect('todos')->with('warning','Todo à été Ajouté');
+    }
+    
+    
 }
