@@ -49,6 +49,6 @@ class TodoController extends Controller
         $todo->name = $request->name;
         $todo->description = $request->description;
         $todo->save();
-        return redirect('todos')->with('warning','Todo à été Ajouté');
+        return redirect('todos')->with('success','Todo à été Ajouté');
     }
 }
