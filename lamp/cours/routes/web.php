@@ -30,4 +30,4 @@ Route::get('/todos', [ TodoController::class, 'Home']);
 
 Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ]);
 
-Route::patch('/todos', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");
+Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");
