@@ -12,8 +12,11 @@ class TodoController extends Controller
         return view('todos', ["todos"=> $todos]);
     }
     
-    public function UpdateTodo($id){
-        ddd($id);
-        return view('UpdateTodo');
+    public function UpdateTodo(Todo $todo){
+        return view('UpdateTodo', ["todo" => $todo]);
+    }
+    
+    public function UpdateTodoPost(Request $request){
+      ddd($request);
     }
 }
