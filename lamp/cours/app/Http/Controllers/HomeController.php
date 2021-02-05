@@ -24,7 +24,6 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function Home(){
-    
           return view('welcome');
     }
 }

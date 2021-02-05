@@ -26,3 +26,4 @@ Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostPro
 
 
 require "Groups/Todos.php";
+require "Groups/Auth.php";
