@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::get('/profil',[ ProfilController::class, 'Profil' ]);
 
 Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
 
+Route::get('/todos', [\App\Http\Controllers\TodoController::class, 'Home']);
