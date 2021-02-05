@@ -22,12 +22,10 @@ Route::get('/about', [ HomeController::class, 'about' ]);
 
 
 Route::get('/profil',[ ProfilController::class, 'Profil' ]);
-
 Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
 
 
 Route::get('/todos', [ TodoController::class, 'Home']);
-
 Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ])->name('TodoEdit');
-
-Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");
+Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name('UpdateTodo');
+Route::post('/todos/{todo:id}', [TodoController::class, 'DeleteTodo'])->name('DeleteTodo');

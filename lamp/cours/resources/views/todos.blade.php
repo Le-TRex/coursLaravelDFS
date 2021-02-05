@@ -22,11 +22,13 @@
             <td>{{$todo->name}}</td>
             <td>{{$todo->description}}</td>
             <td><a href="{{route('TodoEdit', $todo->id)}}">Update</a></td>
-
-{{--            <td><a href="{{route('Tododelete', $todo->id)}}">Delete</a></td>--}}
-
-            <td><a>Delete</a></td>
-        </tr>
+            <td>
+                <form action="{{ route('DeleteTodo', $todo->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-primary mb-2">Supprimer</button>
+                </form>
+            </td>
+         </tr>
     @endforeach
 
     </tbody>

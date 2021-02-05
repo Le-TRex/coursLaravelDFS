@@ -33,4 +33,10 @@ class TodoController extends Controller
 
       return back()->with('success','Todo a été actualisée');
     }
+
+    public function deleteTodo(Todo $todo)
+    {
+        $todo->delete();
+        return back()->with('success', 'Un des to do a été supprimé ! ');
+    }
 }
