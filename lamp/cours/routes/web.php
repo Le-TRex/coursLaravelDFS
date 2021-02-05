@@ -4,7 +4,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,4 +30,4 @@ Route::get('/todos', [ TodoController::class, 'Home']);
 
 Route::get('/todos/{todo:id}', [ TodoController::class, 'UpdateTodo' ]);
 
-Route::patch('/todos/{todo:id}', [ TodoController::class, 'UpdateTodoPost' ])->name('UpdateTodo');
+Route::patch('/todos', [ TodoController::class, 'UpdateTodoPost' ])->name("UpdateTodo");

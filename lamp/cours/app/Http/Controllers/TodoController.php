@@ -12,6 +12,7 @@ class TodoController extends Controller
         return view('todos', ["todos"=> $todos]);
     }
 
+
 //    Cette fonction permet d'update un élément dans la table Todo. ATTENTION, les users peuvent accéder à l'update !
 //    public function UpdateTodo($id){
 //        $todo = Todo::where("id",$id)->first();
@@ -19,11 +20,14 @@ class TodoController extends Controller
 //        return view('UpdateTodo');
 //    }
 
+
+
     public function UpdateTodo(Todo $todo){
         return view('UpdateTodo', ["todo" => $todo]);
     }
 
-    public function UpdateTodoPost(Request $request, Todo $todo) {
-        ddd ($request);
+    public function UpdateTodoPost(Request $request){
+      ddd($request);
+
     }
 }

@@ -2,7 +2,8 @@
 
 <label for="staticEmail" class="col-sm-2 col-form-label">id {{$todo->id}}</label>
 
-<form method="POST" action="{{ route('UpdateTodo') }}">
+
+<form method="post" action="{{ route('UpdateTodo') }}">
     @csrf
     @method("patch")
     <div class="form-group row">
@@ -17,7 +18,10 @@
             <input type="text" name="description" class="form-control" id="inputPassword" placeholder="Password" value="{{$todo->description}}">
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-</form>
 
 {{--TODO : modifier champs formulaires --}}
+
+    <button type="submit" class="btn btn-primary mb-2">Update</button>
+
+</form>
+
