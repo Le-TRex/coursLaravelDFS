@@ -22,6 +22,7 @@
             <td>{{$todo->name}}</td>
             <td>{{$todo->description}}</td>
             <td><a href="{{route('TodoEdit', $todo->id)}}">Update</a></td>
+{{--            <td><a href="{{route('Tododelete', $todo->id)}}">Delete</a></td>--}}
             <td><a>Delete</a></td>
         </tr>
     @endforeach
