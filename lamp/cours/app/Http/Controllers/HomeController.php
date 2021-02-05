@@ -22,10 +22,12 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function Home(){
-        $todo = new Todo();
-        $todo->name = "salut";
-        $todo->description = "je suis une description";
-        $todo->save();
+        $todos = Todo::where('id',1)->first();
+        $todos->name = "Régis";
+        $todos->save();
+        
+        ddd($todos);
+        
         return view('welcome');
     }
 }
