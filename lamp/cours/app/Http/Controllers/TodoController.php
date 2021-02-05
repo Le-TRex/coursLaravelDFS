@@ -37,6 +37,20 @@ class TodoController extends Controller
     public function deleteTodo(Todo $todo)
     {
         $todo->delete();
-        return back()->with('success', 'Un des to do a été supprimé ! ');
+        return back()->with('warning', 'Un des to do a été supprimé ! ');
+    }
+
+    public function createTodo()
+    {
+        return view('CreateTodos');
+    }
+
+    public function createTodoPost(Request $request)
+    {
+        $todo= new Todo();
+        $todo->name = $request->name;
+        $todo->description = $request->description;
+        $todo->save();
+        return back()->with('success', 'Nouveau to do créé !');
     }
 }

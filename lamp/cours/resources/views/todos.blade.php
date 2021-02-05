@@ -1,6 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-
+@include('Components.flash');
 
 <table class="table">
     <thead>
@@ -16,6 +16,12 @@
     </thead>
     <tbody>
 
+    <form action="{{route('CreateTodo')}}" method="get">
+        @csrf
+        <button type="submit" class="btn btn-primary mb-2">Créer un nouveau to do</button>
+    </form>
+
+
     @foreach($todos as $todo)
         <tr>
             <th scope="row">{{$todo->id}}</th>
@@ -23,8 +29,9 @@
             <td>{{$todo->description}}</td>
             <td><a href="{{route('TodoEdit', $todo->id)}}">Update</a></td>
             <td>
-                <form action="{{ route('DeleteTodo', $todo->id) }}" method="POST">
+                <form action="{{ route('DeleteTodo', $todo->id) }}" method="post">
                     @csrf
+                    @method('delete')
                     <button type="submit" class="btn btn-primary mb-2">Supprimer</button>
                 </form>
             </td>
