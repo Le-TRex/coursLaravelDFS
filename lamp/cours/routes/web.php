@@ -26,7 +26,7 @@ Route::get('/profil',[ ProfilController::class, 'Profil' ]);
 Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostProfil');
 
 
-require "Groups.Todos.php";
+require "Groups/Todos.php";
 
 //Route::prefix('todos')->group(function(){
 //    Route::get('/', [ TodoController::class, 'Home'])->name('homeTodos');
