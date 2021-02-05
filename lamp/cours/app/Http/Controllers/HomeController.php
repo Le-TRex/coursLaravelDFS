@@ -29,6 +29,7 @@ class HomeController extends Controller
     public function Home(){
 
 
+
 //        afficher les entrées de la table todos dont l'id = 1
 //        $todos = Todo::where('id', 1)->get();
 //        afficher la 1ère entrée de la table todos dont l'id = 1
@@ -50,6 +51,5 @@ class HomeController extends Controller
 
 
         return view('welcome');
-
     }
 }

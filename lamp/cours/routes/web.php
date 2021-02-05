@@ -27,6 +27,8 @@ Route::post('/profil', [ ProfilController::class, 'PostProfil' ])->name('PostPro
 
 
 require "Groups/Todos.php";
+require "Groups/Auth.php";
+
 
 //Route::prefix('todos')->group(function(){
 //    Route::get('/', [ TodoController::class, 'Home'])->name('homeTodos');
@@ -46,4 +48,6 @@ require "Groups/Todos.php";
 
 Route::get('/users', [UserController::class, 'showUsers'])->name('users');
 Route::get('/users/create', [UserController::class, 'createUser'])->name('createUser');
+
+
 
