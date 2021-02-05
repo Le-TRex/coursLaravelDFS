@@ -7,7 +7,9 @@
     <tr>
         <th scope="col">#id</th>
         <th scope="col">name</th>
-        <th scope="col">text</th>
+        <th scope="col">description</th>
+        <th scope="col">update</th>
+        <th scope="col">delete</th>
     </tr>
     </thead>
     <tbody>
@@ -17,7 +19,8 @@
             <th scope="row">{{ $todo->id }}</th>
             <td>{{ $todo->name }}</td>
             <td>{{ $todo->description }}</td>
-
+            <td><a>Update</a> </td>
+            <td><a>Delete</a> </td>
         </tr>
     @endforeach
     </tbody>

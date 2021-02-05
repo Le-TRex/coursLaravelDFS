@@ -13,4 +13,8 @@ class TodoController extends Controller
         return view('todos', ["todos" => $todos]);
 
     }
+
+    public function UpdateTodo(){
+
+    }
 }
