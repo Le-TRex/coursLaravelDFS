@@ -31,6 +31,6 @@ class TodoController extends Controller
       $todo->description = $request->description;
       $todo->save();
 
-      return back()->with('success', 'Todo a été actualisé ! ');
+      return back()->with('success','Todo a été actualisée');
     }
 }

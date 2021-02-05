@@ -5,7 +5,9 @@
 <label for="staticEmail" class="col-sm-2 col-form-label">id {{$todo->id}}</label>
 
 
+
 <form method="post" action="{{ route('UpdateTodo', $todo->id) }}">
+
     @csrf
     @method("patch")
     <div class="form-group row">
