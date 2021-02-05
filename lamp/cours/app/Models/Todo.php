@@ -13,5 +13,5 @@ class Todo extends Model
      * Si table et Model non nommés correctement :
      * protected $table = "nomDeLaTableLiéeAuModel";
      */
-
 }
+
