@@ -25,10 +25,26 @@ class HomeController extends Controller
      * @return Application|Factory|View
      */
     public function Home(){
-        $todo = new Todo();
-        $todo->name = "salut";
-        $todo->description = "je suis une description";
-        $todo->save();
+//        afficher les entrées de la table todos dont l'id = 1
+//        $todos = Todo::where('id', 1)->get();
+//        afficher la 1ère entrée de la table todos dont l'id = 1
+//        $todos = Todo::where('id', 1)->first();
+//        afficher un array contenant les entrées de la table todos donc l'id =1 et le name = salut
+//        $todos = Todo::where([
+//            ['id','>', 1],
+//            ['name', '=', 'salut']
+//        ])->get();
+//        modifier l'entrée dans la table todos donc l'id = 1, on change le name en Toto
+//        $todos = Todo::where('id', 1)->first();
+//        $todos->name = 'Toto';
+//        $todos->save();
+//        ddd($todos);
+//        $todo = new Todo();
+//        $todo->name = "salut";
+//        $todo->description = "je suis une description";
+//        $todo->save();
+
+
         return view('welcome');
     }
 }
